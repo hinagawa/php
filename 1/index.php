@@ -1,6 +1,5 @@
 <?php
-ini_set('max_execution_time', 900);
-include("main.html");
+include("index.html");
  $my_string=$_REQUEST['input_string'];
  $my_value=$_REQUEST['input_value'];
  $a=0;
