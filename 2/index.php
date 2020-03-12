@@ -1,9 +1,9 @@
 <?php
-include("index.html");
-$my_string=$_REQUEST["input_string"];
-$new_string="";
+if (isset($_REQUEST["input_string"])) {
 
-
+    $my_string=$_REQUEST["input_string"];
+    echo " ".replace($my_string);
+} else include "index.html";
 function generate($string){
     $k=0;
     for($i=0; $i<strlen($string);$i++){
@@ -36,13 +36,14 @@ function generate($string){
     return $k;
 
 }
-function replace($s, $new_string) {
+function replace($s) {
+    $new_string="";
     foreach($g=generate($s) as $value) {
         $new_string=$new_string.$value;
     }
-   echo $new_string;
+    echo "Кол-во замен ".$g->getReturn();
+   return $new_string;
+
 }
 
-
-replace($my_string, $new_string);
 ?>
