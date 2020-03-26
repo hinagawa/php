@@ -11,6 +11,8 @@ function replace($my_string, $my_value)
 
  $a = 0;
  $i = 0;
+ $op = 0;
+ $cl = 0;
  $my_array = array(0);
  for ($k = 0; $k < strlen($my_string); $k++) {
   switch ($my_string[$k]) {
@@ -34,22 +36,34 @@ function replace($my_string, $my_value)
     $my_array[$a] = ord($my_value[$i]);
     $i++;
     break;
-   case "[":
-    if ($my_array[$a] == 0) {
-     while ($my_string[$k] != "[") {
-      $k++;
-     }
-     $k++;
-    }
-    break;
    case "]":
     if ($my_array[$a] != 0) {
-     while ($my_string[$k] != "[") {
-      $k--;
+     $cl++;
+     if ($my_array[$a] != 0) {
+      while ($cl != 0) {
+       $k--;
+       if ($my_string[$k] == "]") {
+        $cl++;
+       } else if ($my_string[$k] == "[") {
+        $cl--;
+       }
+      }
      }
-     break;
     }
-
+    break;
+   case "[":
+    if ($my_array[$a] == 0) {
+     $op++;
+     while ($op != 0) {
+      $i++;
+      if ($my_string[$k] == "[") {
+       $op++;
+      } else if ($my_string[$k] == "]") {
+       $op--;
+      }
+     }
+    }
+    break;
   }
  }
 }
