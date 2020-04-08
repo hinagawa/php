@@ -4,7 +4,7 @@ if (isset($_GET['input_string'])&& $_GET['input_string']!='') {
     if (isset($_GET["input_string"]) && isset($_GET['ping']) && !isset($_GET['tracert'])) {
         $my_string = $_GET['input_string'];
         $p = $_GET['ping'];
-        print "Your ip address " . $my_string;
+        print "Вы ввели адрес " . $my_string;
         $text = ping($my_string);
         print "<p><b>" . find_ip($text) . "</b></p>";
         print "<p>Успешно " . find_paket($text) . "%</p>";
@@ -12,11 +12,11 @@ if (isset($_GET['input_string'])&& $_GET['input_string']!='') {
         $my_string = $_GET['input_string'];
         $t = $_GET['tracert'];
         $text = tracert($my_string);
-        print "Tracert ip:<br>";
+        print "Трассировка через адреса:<br>";
         find_tracert($text);
 
     } else if (isset($_GET["input_string"]) && isset($_GET['tracert']) && isset($_GET['ping'])) {
-        print "Choose ping or tracert";
+        print "Выберите либо ping, либо tracert";
     } else include "index.html";
 }
 else {
