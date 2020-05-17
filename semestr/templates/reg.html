@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Registration</title>
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.css">
+    <style>
+        html {
+            background: ;
+        }
+
+        fieldset {
+            position: absolute;
+            right: 460px;
+            top: 100px;
+            width: 550px;
+            height: 400px;
+
+        }
+
+        input {
+            margin-top: 50%;
+        }
+    </style>
+</head>
+<body>
+
+
+<fieldset>
+    <legend>Registration</legend>
+    <form action="reg" method="post">
+        <input style="margin-top: 5%" type="text" placeholder="Enter your name" name="name"/>
+
+
+        <input style="margin-top: 5%" type="email" placeholder="Enter email" name="email"/>
+
+
+        <input style="margin-top: 5%" type="password" placeholder="Enter password" name="password"/>
+        <input style="margin-top: 5%" type="password" placeholder="Confirm password" name="confirm_pass"/>
+        <button class="button-lg button-warning" style="margin-top: 5%" type="button">Send</button>
+        <a style="margin-top: 20%" href="localhost:8080/reg_google">Войти через Google</a>
+
+    </form>
+
+</fieldset>
+<script src="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.js"></script>
+</body>
+</html>
