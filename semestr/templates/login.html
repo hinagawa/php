@@ -2,39 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Authorization</title>
+    <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.css">
+    <style>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-    <!-- Custom styles for this template -->
-    <link href="../../../../Desktop/styles/auth.css" rel="stylesheet">
+        fieldset {
+            position: absolute;
+            right: 460px;
+            width: 550px;
+            height: 300px;
+            background-color: white;
+            top: 10px;
 
+        }
+
+        html {
+            background-color: #ff8300;
+        }
+
+        input {
+            margin-top: 50%;
+        }
+
+        img {
+            position: absolute;
+            right: 500px;
+            top: 350px;
+
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="container">
+<fieldset>
+    <form action="login" method="post">
+        <h2>Sign in</h2>
+        <input style="margin-top: 5%" type="email" placeholder="Email" name="email">
+        <input style="margin-top: 5%" type="password" placeholder="Password" name="password">
 
-    <form action="login" method="post" class="form-signin">
-        <h2 class="form-signin-heading">Sign in</h2>
-        <input type="email" class="form-control" placeholder="Email" name="email" required autofocus>
-        <input type="password" class="form-control" placeholder="Password" name="password" required>
-        <label class="checkbox">
-            <input type="checkbox" value="remember-me"> Remember me
-        </label>
-        <#if notExist!false == true>
-        <br>
-        <span>User with given credentials does not exist</span>
-    </
-    #if>
-    <button class="btn btn-lg btn-dark btn-block" type="submit">Sign in</button>
+        <button style="margin-top: 5%" class="button-lg button-warning" style="margin-top: 5%" type="button">Sign in
+        </button>
     </form>
-
-</div>
-
+</fieldset>
+<img src="https://media2.giphy.com/media/i79P9wUfnmPyo/giphy.gif?cid=ecf05e47a9178c1cbbc3a741085a6152f87448362dba2354&rid=giphy.gif">
+<script src="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.js"></script>
 </body>
 </html>
