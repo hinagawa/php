@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profile</title>
+    <title>All Songs</title>
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.css">
     <div class="container mydiv">
         <div class="row" style="background-color: white">
@@ -29,10 +29,30 @@
         .mydiv {
             height: 30px;
         }
+
+        form {
+            position: absolute;
+            width: 800px;
+            left: 350px;
+            top: 300px;
+
+        }
+
+        img {
+            position: absolute;
+            left: 500px;
+            top: 50px;
+        }
     </style>
 </head>
 <body>
-
+<img src="https://i.giphy.com/media/Rgc7pvWsESXgNOsMBL/giphy.webp">
+<form action="find.php" method="post">
+    <div class="input-group">
+        <input type="text">
+        <button type="button" class="button">Find</button>
+    </div>
+</form>
 
 <script src="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.js"></script>
 </body>

@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Profile</title>
+    <title>Chat</title>
     <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.css">
     <div class="container mydiv">
         <div class="row" style="background-color: white">
@@ -29,10 +29,37 @@
         .mydiv {
             height: 30px;
         }
+
+        .frame {
+            position: absolute;
+            width: 60%;
+            height: 70%;
+            left: 300px;
+            top: 150px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        form {
+            position: absolute;
+            width: 95%;
+            left: 30px;
+            top: 450px;
+
+        }
     </style>
 </head>
 <body>
 
+<div id="chat_frame" class="frame">
+    <form>
+        <div class="input-group">
+            <input type="text">
+            <button type="button-lg" class="button">Send</button>
+        </div>
+    </form>
+
+</div>
 
 <script src="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.js"></script>
 </body>
